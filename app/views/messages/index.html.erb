@@ -1,4 +1,7 @@
-Signed in as <%= cookies.signed[:username] %>
+Signed in as @<%= cookies.signed[:username] %>.
+<%= link_to 'Change', root_path %>
+<br/>
+<br/>
 
 <%= form_for :message, url: messages_path, remote: true do |f| %>
   <%= f.label :body  %><br/>
