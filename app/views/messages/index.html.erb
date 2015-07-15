@@ -1,5 +1,4 @@
-<div id="messages"></div>
-<br/>
+Signed in as <%= cookies.signed[:username] %>
 
 <%= form_for :message, url: messages_path, remote: true do |f| %>
   <%= f.label :body  %><br/>
