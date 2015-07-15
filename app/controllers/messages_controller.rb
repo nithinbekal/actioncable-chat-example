@@ -3,6 +3,9 @@ class MessagesController < ApplicationController
   end
 
   def create
-    render text: 'Hello'
+    ActionCable.server.broadcast "messages:new",
+      message: MessagesController.render(partial: 'messages/message',
+                                         locals: { message: params[:message][:body] })
+    head :ok
   end
 end
