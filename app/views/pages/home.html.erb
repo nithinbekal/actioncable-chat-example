@@ -1,12 +1,6 @@
-<div id="messages"></div>
-<br/>
 
-<div class="field">
-  <label>Username</label>
-  <input id="username" type="text" />
-</div>
-
-<div class="field">
-  <label>Message</label>
-  <input id="message" type="text" />
-</div>
+<%= form_for :session, url: sessions_path do |f| %>
+  <%= f.label :username, 'Enter a username' %><br/>
+  <%= f.text_field :username %><br/>
+  <%= f.submit 'Start chatting' %>
+<% end %>

@@ -1,0 +1,9 @@
+<div id="messages"></div>
+<br/>
+
+<%= form_for :message, url: messages_path, remote: true do |f| %>
+  <%= f.label :body  %><br/>
+  <%= f.text_field :body %><br/>
+  <%= f.submit 'Send' %>
+<% end %>
+
