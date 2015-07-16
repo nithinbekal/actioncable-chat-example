@@ -1,10 +1,9 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
-    identified_by :current_user
+    identified_by :username
 
     def connect
-      self.current_user = cookies.signed[:username]
-      logger.add_tags 'ActionCable', current_user
+      self.username = cookies.signed[:username]
     end
   end
 end
