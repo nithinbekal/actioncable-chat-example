@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rails/actioncable.git
-  revision: f1b9095bdc30913a914b321c590d64068c6c1836
+  revision: 130b8f9ddf321d49f43b730b6677bb25e51d4c32
   specs:
     actioncable (0.1.0)
       actionpack (>= 4.2.0)
@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: ce1a5a73996c23fe13836eab7fa9c7e803155161
+  revision: 935796f4fd7d75950db87156d6540028a9044fdf
   specs:
     arel (7.0.0.alpha)
 
@@ -27,7 +27,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 368b9938ec9d8fbb8146e65c1edf744d32d207c9
+  revision: 094571b46dbc00a2db0bfcc96c38d984d2b675f3
   specs:
     actionmailer (5.0.0.alpha)
       actionpack (= 5.0.0.alpha)
@@ -59,6 +59,7 @@ GIT
       activesupport (= 5.0.0.alpha)
       arel (= 7.0.0.alpha)
     activesupport (5.0.0.alpha)
+      concurrent-ruby (~> 0.9.0)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -116,6 +117,7 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
+    concurrent-ruby (0.9.0)
     debug_inspector (0.0.2)
     em-hiredis (0.3.0)
       eventmachine (~> 1.0)
