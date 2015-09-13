@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
 
   def create
     message = Message.new(person_params)
-    message.username = cookies.signed[:username]
+    message.username = current_username
     ActionCable.server.broadcast 'messages',
       message: MessagesController.render(message)
     head :ok
