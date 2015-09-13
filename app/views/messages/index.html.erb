@@ -8,7 +8,7 @@ Signed in as @<%= cookies.signed[:username] %>.
 <br/>
 <br/>
 
-<%= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f| %>
+<%= form_for @message, remote: true do |f| %>
   <%= f.label :body  %><br/>
   <%= f.text_field :body %><br/>
   <%= f.submit 'Send' %>
