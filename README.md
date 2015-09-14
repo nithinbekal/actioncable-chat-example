@@ -1,24 +1,17 @@
-## README
+# Action Chat Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example of a chat program using Rails Action Cable
 
-Things you may want to cover:
+# setup
 
-* Ruby version
+```bash
+bundle
+rake db:create db:migrate
+```
 
-* System dependencies
+# running
 
-* Configuration
+have redis and postgres running
+in one tab: `./bin/cable`
+in another tab: `./bin/rails s`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
