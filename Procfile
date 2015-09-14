@@ -1,3 +1,1 @@
-web:     bundle exec rails s -p 3000
-channel: bin/channel
-
+web: bundle exec puma -p $PORT
