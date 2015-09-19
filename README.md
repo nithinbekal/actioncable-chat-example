@@ -4,27 +4,24 @@ This is an example of a chat program using Rails Action Cable.
 
 The original code from my [blog post] can be found on the [basic branch].
 
-# setup
+# Setup
 
 ```bash
 bundle
 rake db:create db:migrate
 ```
 
-# running
+# Running
 
-Run the Action cable server:
-
-```bash
-chmod +x bin/cable
-./bin/cable
-```
-
-have redis and postgres or sqlite3 running
+Have redis and postgres or sqlite3 running.
 
 ```bash
 ./bin/rails s
 ```
+
+This example has been configured so that
+both web and cable processes run in a single process.
+So we don't need to run `./bin/cable` separately.
 
 Browse to http://localhost:3000/ in a regular browser window and http://localhost:3000/ in another private browser window to start chatting.
 
