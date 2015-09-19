@@ -13,12 +13,20 @@ rake db:create db:migrate
 
 # running
 
-have redis and postgres running
+Run the Action cable server:
+
+```bash
+chmod +x bin/cable
+./bin/cable
+```
+
+have redis and postgres or sqlite3 running
 
 ```bash
 ./bin/rails s
 ```
 
+Browse to http://localhost:3000/ in a regular browser window and http://localhost:3000/ in another private browser window to start chatting.
 
 # Thanks
 
