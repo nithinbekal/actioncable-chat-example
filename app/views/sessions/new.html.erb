@@ -1,6 +1,9 @@
 
+<br/>
+<br/>
+
 <%= form_for :session, url: sessions_path do |f| %>
-  <%= f.label :username, 'Enter a username' %><br/>
-  <%= f.text_field :username %><br/>
+  <%= f.label :username, 'Pick your username' %><br/>
+  <%= f.text_field :username, value: current_username, autofocus: true %><br/>
   <%= f.submit 'Start chatting' %>
 <% end %>
