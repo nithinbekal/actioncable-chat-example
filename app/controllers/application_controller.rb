@@ -8,10 +8,6 @@ class ApplicationController < ActionController::Base
   def current_username
     cookies.signed[:username]
   end
+
   helper_method :current_username
-
-
-  def current_username=(username)
-    cookies.signed[:username] = username
-  end
 end
