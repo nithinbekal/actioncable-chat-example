@@ -1,16 +1,10 @@
-Signed in as @<%= current_username %>.
-<%= link_to 'Change', root_path %>
-<br/>
-<br/>
 
 <div id='messages'></div>
 
-<br/>
-<br/>
+<div id='chat-form'>
 
-<%= form_for @message, remote: true do |f| %>
-  <%= f.label :body  %><br/>
-  <%= f.text_field :body %><br/>
-  <%= f.submit 'Send' %>
-<% end %>
-
+  <%= form_for @message, remote: true do |f| %>
+    <%= link_to "@#{current_username}", root_path %>:
+    <%= f.text_field :body %>
+  <% end %>
+</div>
