@@ -1,8 +1,10 @@
 
-<div id='messages'></div>
+<%= react_component 'MessagesList',
+      message: render(partial: 'messages/message.json',
+                      locals: { messages: [] })
+%>
 
 <div id='chat-form'>
-
   <%= form_for @message, remote: true do |f| %>
     <%= link_to "@#{current_username}", root_path %>:
     <%= f.text_field :body, autofocus: true %>
