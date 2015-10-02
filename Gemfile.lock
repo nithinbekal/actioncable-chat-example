@@ -102,9 +102,26 @@ GIT
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
 
+GIT
+  remote: git://github.com/vipulnsward/react-rails.git
+  revision: 9133f8053360b87692a14183d921815e62fcdf83
+  branch: sprockets-3-compat
+  specs:
+    react-rails (1.1.0)
+      babel-transpiler (>= 0.7.0)
+      coffee-script-source (~> 1.8)
+      connection_pool
+      execjs
+      rails (>= 3.2)
+      tilt
+
 GEM
   remote: https://rubygems.org/
   specs:
+    babel-source (5.8.26)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -118,6 +135,7 @@ GEM
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
     concurrent-ruby (0.9.0)
+    connection_pool (2.2.0)
     debug_inspector (0.0.2)
     em-hiredis (0.3.0)
       eventmachine (~> 1.0)
@@ -177,6 +195,10 @@ GEM
     spring (1.3.6)
     sprockets (3.2.0)
       rack (~> 1.0)
+    sprockets-es6 (0.8.0)
+      babel-source (>= 5.8.11)
+      babel-transpiler
+      sprockets (>= 3.0.0)
     sqlite3 (1.3.10)
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -206,8 +228,10 @@ DEPENDENCIES
   jquery-rails
   puma
   rails!
+  react-rails!
   sass-rails (~> 5.0)
   spring
+  sprockets-es6
   sprockets-rails!
   sqlite3
   turbolinks

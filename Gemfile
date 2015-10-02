@@ -4,6 +4,8 @@ gem 'rails', github: "rails/rails"
 gem 'sprockets-rails', github: "rails/sprockets-rails"
 gem 'arel', github: "rails/arel"
 gem 'actioncable', github: 'rails/actioncable'
+gem 'react-rails', github: 'vipulnsward/react-rails', branch: 'sprockets-3-compat'
+gem 'sprockets-es6'
 
 gem 'sqlite3'
 gem 'puma'
