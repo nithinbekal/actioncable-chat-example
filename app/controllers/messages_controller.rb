@@ -7,7 +7,8 @@ class MessagesController < ApplicationController
     message = Message.new(person_params)
     message.username = current_username
     ActionCable.server.broadcast 'messages',
-      message: MessagesController.render(message)
+      message: MessagesController.render(partial: 'messages/message',
+                                         locals: {message: message})
     head :ok
   end
 

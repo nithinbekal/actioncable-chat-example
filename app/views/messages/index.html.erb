@@ -1,8 +1,5 @@
 
-<%= react_component 'MessagesList',
-      message: render(partial: 'messages/message.json',
-                      locals: { messages: [] })
-%>
+<%= react_component 'MessageList', messages: '' %>
 
 <div id='chat-form'>
   <%= form_for @message, remote: true do |f| %>

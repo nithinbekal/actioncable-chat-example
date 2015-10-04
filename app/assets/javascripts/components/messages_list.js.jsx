@@ -1,28 +1,49 @@
 
-var MessagesList = React.createClass({
-  getInitialState(){
-    let message = JSON.parse(this.props.message);
-    return {message: message};
-  },
-
+class Message extends React.Component {
   render() {
-    let messages = this.state.message.messages.map((message) => {
-      return this.renderComment(message);
-    });
-
-    return (
-      <div id='messages'>
-        {messages}
-      </div>
-    );
-  },
-
-  renderComment(message) {
-    return (
-      <p class='message'>
-        <b>{ message.username }</b>: &nbsp;
-        { message.body }
+    return(
+      <p className='message'>
+        <b>{ this.props.username }</b>: &nbsp;
+        { this.props.body }
       </p>
     );
   }
-});
+}
+
+class MessageList extends React.Component {
+  constructor() {
+    super();
+    this.state = { messages: [] };
+  }
+
+  componentDidMount() {
+    component = this;
+
+    App.messages = App.cable.subscriptions.create("MessagesChannel", {
+      received: function(data) {
+        message = JSON.parse(data.message);
+        messages = component.state.messages;
+        messages.push(message);
+        component.setState({messages: messages});
+
+        $messages = $('#messages');
+        $messages.scrollTop($messages.height() + 1000)
+      }
+    })
+  }
+
+  render() {
+    return (
+      <div id='messages'>
+      {
+        this.state.messages.map( (message, i) => {
+          return (<Message
+                    key={i}
+                    username={message.username}
+                    body={message.body} />);
+        })
+      }
+      </div>
+    )
+  }
+}

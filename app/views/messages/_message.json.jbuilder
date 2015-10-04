@@ -1,3 +1,1 @@
-json.messages(messages) do |message|
-  json.(message, :username, :body)
-end
+json.(message, :username, :body)
