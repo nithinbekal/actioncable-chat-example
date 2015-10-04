@@ -1,6 +1,9 @@
 # Action Chat Example
 
-This is an example of a chat program using Rails Action Cable.
+This is an example of a chat program using Rails, Action Cable and React.js.
+
+The master branch of this repo contains a simple version of this app that
+doesn't use React.js.
 
 The original code from my [blog post] can be found on the [basic branch].
 
