@@ -7,6 +7,11 @@ doesn't use React.js.
 
 The original code from my [blog post] can be found on the [basic branch].
 
+## References
+
+* [Using ReactJS with Rails Action Cable](http://blog.bigbinary.com/2015/07/19/using-reactjs-with-rails-actioncable.html)
+* [ReactJS and Socket.IO Chat Application](http://danialk.github.io/blog/2013/06/16/reactjs-and-socket-dot-io-chat-application/)
+
 # Setup
 
 ```bash
